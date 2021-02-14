@@ -79,7 +79,7 @@
       - script: |
           # Exit when any command returns a failure status.
           set -e
-  
+          #a
           ## Write terraform.tfvars.
           #echo 'resource_group_location = "'$(ResourceGroupLocation)'"' | tee terraform.tfvars
           ## Write backend.tfvars.
