@@ -1,14 +1,17 @@
 terraform {
   required_version = "> 0.12.0"
-
-  backend "azurerm" {
-    #version = ">=2.0.0"
-  }
 }
 
 provider "azurerm" {
+  version = ">=2.0.0"
+  subscription_id = "5b2bdc59-35f1-4f88-b2ed-7df69c1465ad"
+  client_id       = "b54e7478-1c3a-4774-9552-f2633e4d0623"
+  client_secret   = "rrb4mw-O9ZmzT.Mf6xbO-nZ.ccOkVI3hR0"
+  tenant_id       = "fbb9b7ec-2470-4cd0-8445-ba2b538d5a9d"
   features {}
 }
+
+
 
 variable "resource_group_name" {
   default = "tailspin-space-game-rg"
