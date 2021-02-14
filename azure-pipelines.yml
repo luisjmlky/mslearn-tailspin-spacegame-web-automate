@@ -108,7 +108,7 @@
     - deployment: Deploy
       dependsOn: Provision
       variables:
-        WebAppNameDev: $[ dependencies.Provision.outputs['RunTerraform.WebAppNameDev'] ]
+        WebAppNameDev: $[dependencies.Provision.outputs['RunTerraform.WebAppNameDev']]
       pool:
         vmImage: 'ubuntu-18.04'
       environment: dev
@@ -121,6 +121,6 @@
             - task: AzureWebApp@1
               displayName: 'Azure App Service Deploy: website'
               inputs:
-                azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                azureSubscription: '5b2bdc59-35f1-4f88-b2ed-7df69c1465ad'
                 appName: '$(WebAppNameDev)'
                 package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
